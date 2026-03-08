@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayana Beauty Home Services | Premium Digital Pamphlet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --rose-soft: #FFF5F6;
+            --rose-pink: #E91E63;
+            --rose-deep: #C2185B;
+            --gold: #C5A059;
+            --gold-light: #E0C9A6;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--rose-soft);
+            color: #333;
+        }
+
+        h1, h2, h3, .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gold-border {
+            border: 1px solid var(--gold);
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #C5A059 0%, #F1D592 50%, #C5A059 100%);
+        }
+
+        .pink-gradient {
+            background: linear-gradient(180deg, #FFFFFF 0%, #FFF0F2 100%);
+        }
+
+        .price-cross {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.85em;
+            margin-right: 4px;
+        }
+
+        .price-active {
+            color: var(--rose-deep);
+            font-weight: 600;
+        }
+
+        .pamphlet-column {
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pamphlet-column::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+            background: var(--gold);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--rose-soft);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold-light);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Hero Section -->
+    <header class="relative pt-12 pb-20 px-4 text-center bg-white overflow-hidden">
+        <!-- Floral SVG background elements -->
+        <div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+            <svg width="300" height="300" viewBox="0 0 200 200">
+                <path fill="#C5A059" d="M40,-62.7C53.3,-55.1,66.6,-45.5,75.4,-32.5C84.2,-19.5,88.5,-3.1,85.6,12.2C82.7,27.5,72.6,41.7,60.8,53.4C49,65,35.5,74,21,78.2C6.5,82.4,-9,81.8,-24.5,77.1C-40,72.4,-55.5,63.6,-67.2,51C-78.9,38.4,-86.8,22,-88.4,5C-90,-12,-85.3,-29.6,-74.6,-43C-63.9,-56.4,-47.2,-65.6,-31.4,-71.8C-15.6,-78,0,-81.1,15.6,-75.4C31.2,-69.7,40,-62.7,40,-62.7Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <!-- Logo Recreation -->
+            <div class="flex justify-center mb-6">
+                <div class="relative w-24 h-24 flex items-center justify-center">
+                    <span class="text-7xl font-serif text-[#C5A059] opacity-20 absolute select-none"> </span>
+                    <image src="logo1.png" alt ="Nayana logo" class="w-8000 h-6000 object-contain"></image>
+                    <svg class="w-20 h-20" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    
+                    </svg>
+                </div>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-wide mb-2">NAYANA</h1>
+            <p class="text-lg md:text-xl text-gray-600 uppercase tracking-[0.3em] font-light mb-4">Beauty Home Services</p>
+            <div class="h-px w-24 bg-gold mx-auto mb-6 gold-gradient"></div>
+            <p class="italic text-rose-600 text-lg mb-4">"Professional Beauty Services at Your Doorstep"</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mt-8">
+                <div class="flex items-center gap-2 px-4 py-2 border border-pink-200 rounded-full bg-rose-50">
+                    <i data-lucide="phone" class="w-4 h-4 text-rose-500"></i>
+                    <span class="font-medium">+91 97310 45142</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 border border-pink-200 rounded-full bg-rose-50">
+                    <i data-lucide="award" class="w-4 h-4 text-rose-500"></i>
+                    <span class="font-medium">8 Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Super Saver Packages Section -->
+    <section class="max-w-6xl mx-auto px-4 -mt-10 mb-16 ">
+        <h2 class="text-center text-2xl font-bold mb-8 flex items-center justify-center gap-3">
+            <span class="h-px w-10 bg-gold block"></span>
+            Super-Saver-Packages
+            <span class="h-px w-10 bg-gold block"></span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white p-6 rounded-xl border border-pink-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                <div class="absolute top-0 right-0 bg-rose-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">20% OFF</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Monthly Maintenance</h3>
+                <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                    <li>• Chocolate Roll On Waxing</li>
+                    <li>• Sara Fruit Cleanup</li>
+                    <li>• Threading (Eyebrow & Lip)</li>
+                    <li>• Foot Cut & Polish</li>
+                </ul>
+                <div class="flex items-end justify-between">
+                    <div>
+                        <span class="price-cross">₹2544</span>
+                        <span class="text-2xl font-bold text-rose-600">₹1999</span>
+                    </div>
+                    <button class="bg-rose-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-rose-600">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+             <div class="bg-white p-6 rounded-xl border border-pink-100 shadow-sm hover:shadow-md relative overflow-hidden group">
+                <div class="absolute top-0 right-0 bg-rose-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">25% off</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Wax & Glow</h3>
+                <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                    <li>• Waxing (Full Arms/Full Legs/Under Arms)</li>
+                    <li>• O3+ Shine & Glow Facial</li>
+                    <li>• Threading (Eyebrow & Lip)</li>
+                </ul>
+                <div class="flex items-end justify-between">
+                    <div>
+                        <span class="price-cross">₹3295</span>
+                        <span class="text-2xl font-bold text-rose-600">₹2300</span>
+                    </div>
+                    <button class="bg-rose-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-rose-600">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-6 rounded-xl border border-pink-100 shadow-sm hover:shadow-md relative overflow-hidden group">
+                <div class="absolute top-0 right-0 bg-rose-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">25% off</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Super Saver Packages</h3>
+                <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                    <li>• Waxing (Chocolate Roll On Full Arms,Full Legs, Under Arms)</li>
+                    <li>• Facial (Glovite Loreal Facial)</li>
+                    <li>• Pedicure (Rose Pedicure)</li>
+                    <li>• Eyebrow Upper Lip Threading</li>
+                </ul>
+                <div class="flex items-end justify-between">
+                    <div>
+                        <span class="price-cross">₹3654</span>
+                        <span class="text-2xl font-bold text-rose-600">₹3349</span>
+                    </div>
+                    <button class="bg-rose-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-rose-600">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMBOS-->
+
+
+    <section class="max-w-6xl mx-auto px-4 -mt-10 mb-16 flex-items-center">
+        <h2 class="text-center text-2xl font-bold mb-8 flex-items-center justify-center gap-3">
+            <span class="h-px w-10 bg-gold block"></span>
+            COMBOS
+            <span class="h-px w-10 bg-gold block"></span>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 flex-items-center">
+            <!-- Card 1 -->
+            <div class="bg-white p-6 rounded-xl border border-pink-100 shadow-sm hover:shadow-md relative overflow-hidden group">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Roll On Waxing</h3>
+                <h3 class="text-lg font-bold text-gray-600 space-y-1 mb-4">Chocolate Roll</h3>
+                <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                    <li>•Full Arms, Legs & Underarms</li>
+                </ul>
+                <div class="flex items-end justify-between">
+                    <div>
+                        <span class="price-cross">₹1099</span>
+                        <span class="text-xl font-bold text-rose-600">₹949</span>
+                    </div>
+                    <button class="bg-rose-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-rose-600">Book Now</button>
+                </div>
+                <h3 class="text-lg font-bold text-gray-600 space-y-1 mb-4"> Rica Roll</h3>
+                <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                    <li>•Full Arms, Legs & Underarms</li>
+                </ul>
+                <div class="flex items-end justify-between">
+                    <div>
+                        <span class="price-cross">₹1399</span>
+                        <span class="text-xl font-bold text-rose-600">₹1149</span>
+                    </div>
+                    <button class="bg-rose-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-rose-600">Book Now</button>           
+                 </div>
+            </div>
+
+        <!-- Card 2 -->
+            <div class=" bg-white p-6 rounded-xl border border-pink-100 shadow-sm hover:shadow-md relative overflow-hidden group">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Spatula Waxing</h3>
+                <h3 class="text-lg font-bold text-gray-600 space-y-1 mb-4">Rica Chocolate Wax</h3>
+                <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                    <li>•Full Arms, Legs & Underarms</li>
+                </ul>
+                <div class="flex items-end justify-between">
+                    <div>
+                        <span class="price-cross">₹1199</span>
+                        <span class="text-xl font-bold text-rose-600">₹999</span>
+                    </div>
+                    <button class="bg-rose-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-rose-600">Book Now</button>
+                </div>
+                <h3 class="text-lg font-bold text-gray-600 space-y-1 mb-4"> Honey Wax</h3>
+                <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                    <li>•Full Arms, Legs & Underarms</li>
+                </ul>
+                <div class="flex items-end justify-between">
+                    <div>
+                        <span class="price-cross">₹849</span>
+                        <span class="text-xl font-bold text-rose-600">₹699</span>
+                    </div>
+                    <button class="bg-rose-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-rose-600">Book Now</button>           
+                 </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Services Main Menu (Pamphlet Style) -->
+     
+    <main class="max-w-6xl mx-auto px-4 pb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Column Left -->
+            <div class="space-y-8">
+                <!-- Waxing Section -->
+               
+                      <div class="pamphlet-column p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b border-gray-100 pb-2 flex items-center gap-2">
+                        <i data-lucide="sparkles" class="text-gold w-5 h-5"></i> WAXING
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Full Arms & UA -->
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-sm tracking-widest uppercase mb-3">Full Arms & Underarms</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Chocolate Roll </span> <span><span class="price-cross">750</span><span class="price-active">649</span></span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Rica Wax</span> <span><span class="price-cross">849</span><span class="price-active">749</span></span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Rica Roll </span> <span><span class="price-cross">769</span><span class="price-active">649</span></span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Honey Wax</span> <span><span class="price-cross">449</span><span class="price-active">349</span></span></div>
+                            </div>
+                        </div>
+
+                        <!-- Full Legs -->
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-sm tracking-widest uppercase mb-3">Full Leg Wax</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Chocolate Roll </span> <span><span class="price-cross">649</span><span class="price-active">549</span></span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Rica Wax</span> <span><span class="price-cross">749</span><span class="price-active">649</span></span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Rica Roll</span> <span><span class="price-cross">729</span><span class="price-active">629</span></span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Honey Wax</span> <span><span class="price-cross">550</span><span class="price-active">449</span></span></div>
+                            </div>
+                        </div>
+
+                        <!-- Half Leg -->
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-sm tracking-widest uppercase mb-3">Half Leg Wax</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Honey Wax </span> <span><span class="price-cross">269</span><span class="price-active">200</span></span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Rica Wax</span> <span><span class="price-cross">419</span><span class="price-active">350</span></span></div>    
+                            </div>
+                        </div>
+
+                         <!-- Underarms -->
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-sm tracking-widest uppercase mb-3">Underarms</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Rica Peel </span> <span><span class="price-cross">199</span><span class="price-active">150</span></span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Honey </span> <span><span class="price-cross">120</span><span class="price-active">99</span></span></div>    
+                            </div>
+                        </div>
+
+                    </div>
+                    
+               </div> 
+                
+
+                <!-- Threading Section -->
+                <div class="pamphlet-column p-6">
+                    
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b border-gray-100 pb-2 flex items-center gap-2">
+                        <i data-lucide="sparkles" class="text-gold w-5 h-5"></i>THREADING
+                    </h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center"><span>Eyebrow</span> <span><span class="price-cross">49</span> <span class="price-active">30</span></div>
+                        <div class="flex justify-between items-center"><span>Upper Lip</span><span><span class="price-cross">49</span> <span class="price-active">30</span></div>
+                        <div class="flex justify-between items-center"><span>Chin</span> <span><span class="price-cross">29</span> <span class="price-active">20</span></div>
+                        <div class="flex justify-between items-center"><span>Side Locks</span> <span><span class="price-cross">49</span> <span class="price-active">30</span></div>
+                        <div class="flex justify-between items-center"><span>Forehead</span><span><span class="price-cross">59</span> <span class="price-active">40</span></div>
+                        <div class="flex justify-between items-center"><span>Jawline </span><span><span class="price-cross">99</span> <span class="price-active">40</span></div>
+                        <div class="flex justify-between items-center"><span>Neck</span> <span><span class="price-cross">149</span> <span class="price-active">129</span></div>
+                        <div class="flex justify-between items-center"><span>Full Face</span> <span><span class="price-cross">149</span> <span class="price-active">129</span></div>
+                        
+                    </div>
+                </div>
+
+                <!-- Detan & Bleach Section -->
+                <div class="pamphlet-column p-6">
+                    
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b border-gray-100 pb-2 flex items-center gap-2"><i data-lucide="sparkles" class="text-gold w-5 h-5"></i>DETAN & BLEACH</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-sm mb-2">DETAN SERVICES</h4>
+                            <div class="grid grid-cols-1 gap-1 text-sm">
+                                <div class="flex justify-between"><span>Face & Neck</span>  <span><span class="price-cross">499</span><span class="price-active">349</span></div>
+                                <div class="flex justify-between"><span>Full Arms</span> <span><span class="price-cross">409</span> <span class="price-active">449</span></div>
+                                <div class="flex justify-between"><span>Chest</span> <span><span class="price-cross">549</span> <span class="price-active">449</span></div>
+                                <div class="flex justify-between"><span>Full Legs</span>  <span><span class="price-cross">699</span><span class="price-active">549</span></div>
+                                <div class="flex justify-between"><span>Back </span> <span><span class="price-cross">549</span> <span class="price-active">449</span></div>
+                                <div class="flex justify-between"><span>Full Body</span>  <span><span class="price-cross">1699</span><span class="price-active">1499</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-sm mb-2">BLEACH SERVICES</h4>
+                            <div class="grid grid-cols-1 gap-1 text-sm">
+                                <div class="flex justify-between"><span>Face & Neck</span> <span><span class="price-cross">699</span> <span class="price-active">349</span></div>
+                                <div class="flex justify-between"><span>Full Arms</span>  <span><span class="price-cross">549</span><span class="price-active">449</span></div>
+                                <div class="flex justify-between"><span>Chest</span> <span><span class="price-cross">549</span> <span class="price-active">449</span></div>
+                                <div class="flex justify-between"><span>Full Legs</span>  <span><span class="price-cross">699</span><span class="price-active">549</span></div>
+                                <div class="flex justify-between"><span>Back </span> <span><span class="price-cross">549</span> <span class="price-active">449</span></div>
+                                <div class="flex justify-between"><span>Face & Neck </span>  <span><span class="price-cross">449</span><span class="price-active">349</span></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hair Care -->
+                <div class="pamphlet-column p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 border-b border-gray-100 pb-2 flex items-center gap-2"><i data-lucide="sparkles" class="text-gold w-5 h-5"></i>HAIR CARE</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-sm mb-2 uppercase">Loreal Hair Spa</h4>
+                            <div class="flex justify-between text-sm"><span>Below Shoulder</span><span><span class="price-cross">2099</span> <span class="price-active">1800</span></div>
+                            <div class="flex justify-between text-sm"><span>Up to Shoulder</span><span><span class="price-cross">1349</span> <span class="price-active">1149</span></div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-sm mb-2 uppercase">Hair Colour</h4>
+                            <div class="flex justify-between text-sm"><span>Root Touch Up</span><span><span class="price-cross">399</span> <span class="price-active">249</span></div>
+                            <div class="flex justify-between text-sm"><span>Mehendi Application</span> <span><span class="price-cross">499</span><span class="price-active">349</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column Right -->
+            <div class="space-y-8">
+                <!-- Facials & Clean Ups -->
+                <div class="pamphlet-column p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b border-gray-100 pb-2 flex items-center gap-2"><i data-lucide="sparkles" class="text-gold w-5 h-5"></i>FACIALS & CLEAN UPS</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-sm tracking-widest uppercase mb-3">Signature Facials</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Glovite Facial</span><span><span class="price-cross">1199</span> <span class="price-active">1000</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Wine Glow Facial</span><span><span class="price-cross">1299</span> <span class="price-active">1099</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-700">O3+ Shine & Glow</span> <span><span class="price-cross">1799</span><span class="price-active">1599</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-700">O3+ Power Brightening</span><span><span class="price-cross">2099</span> <span class="price-active">1899</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-sm tracking-widest uppercase mb-3">Clean Up</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Sara Fruit Clean Up</span><span><span class="price-cross">799</span> <span class="price-active">649</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-700">Pinacolada Clean Up</span><span><span class="price-cross">859</span> <span class="price-active">699</span></div>
+                                <div class="flex justify-between items-center"><span class="text-gray-700">O3+ Tan Clear</span> <span><span class="price-cross">999</span><span class="price-active">849</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mani & Pedi -->
+                <div class="pamphlet-column p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b border-gray-100 pb-2 flex items-center gap-2"><i data-lucide="sparkles" class="text-gold w-5 h-5"></i>MANI & PEDI</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-sm uppercase mb-3">Pedicure</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center"><span>British Rose</span> <span><span class="price-cross">869</span><span class="price-active">749</span></div>
+                                <div class="flex justify-between items-center"><span>Chocolate & Vanilla</span><span><span class="price-cross">1059</span> <span class="price-active">899</span></div>
+                                <div class="flex justify-between items-center"><span>Candle Spa</span><span><span class="price-cross">1149</span> <span class="price-active">1199</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-sm uppercase mb-3">Manicure</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center"><span>British Rose</span>  <span><span class="price-cross">799</span><span class="price-active">649</span></div>
+                                <div class="flex justify-between items-center"><span>Candle Spa</span>  <span><span class="price-cross">999</span><span class="price-active">1000</span></div>
+                                <div class="flex justify-between items-center"><span>Chocolate & Vanilla</span><span><span class="price-cross">1149</span> <span class="price-active">1199</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Body Waxing Sections -->
+                <div class="pamphlet-column p-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 border-b border-gray-100 pb-2 uppercase flex items-center gap-2"><i data-lucide="sparkles" class="text-gold w-5 h-5"></i>Body & Specialized Wax</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-xs uppercase mb-2">Full Body Waxing</h4>
+                            <div class="space-y-1 text-sm">
+                                <div class="flex justify-between"><span>Chocolate Roll </span><span><span class="price-cross">1719</span> <span class="price-active">1549</span></div>
+                                <div class="flex justify-between"><span>Rica Roll </span> <span><span class="price-cross">2119</span><span class="price-active">1999</span></div>
+                                <div class="flex justify-between"><span>Rica wax</span> <span><span class="price-cross">2019</span><span class="price-active">1849</span></div>
+                                <div class="flex justify-between"><span>Honey Wax</span> <span><span class="price-cross">1549</span><span class="price-active">1400</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-rose-700 text-xs uppercase mb-2">BACK WAXING</h4>
+                            <div class="space-y-1 text-sm">
+                                <div class="flex justify-between"><span>Chocolate Roll</span> <span><span class="price-cross">719</span> <span class="price-active">599</span></div>
+                                <div class="flex justify-between"><span>Rica Roll</span>  <span><span class="price-cross">869</span><span class="price-active">749</span></div>
+                                <div class="flex justify-between"><span>Rica Wax</span>  <span><span class="price-cross">619</span><span class="price-active">519</span></div>
+                                <div class="flex justify-between"><span>Honey Wax</span>  <span><span class="price-cross">569</span><span class="price-active">449</span></div>
+                            </div>
+                        </div>
+
+                         <div>
+                            <h4 class="font-bold text-rose-700 text-xs uppercase mb-2">BACK WAXING</h4>
+                            <div class="space-y-1 text-sm">
+                                <div class="flex justify-between"><span>Rica Peel</span> <span><span class="price-cross">1399</span> <span class="price-active">1199</span></div>
+                                <div class="flex justify-between"><span>Honey Wax</span>  <span><span class="price-cross">1049</span><span class="price-active">849</span></div>
+                                
+                            </div>
+                        </div>
+
+                        <div >
+                            <h4 class="font-bold text-rose-700 text-xs uppercase mb-2">Rica Peel-Off Face</h4>
+                            <div class="space-y-1 text-sm">
+                                <div class="flex justify-between"><span>Upper Lip</span> <span><span class="price-cross">69</span><span class="price-active">59</span></div>
+                                <div class="flex justify-between"><span>Chin </span> <span><span class="price-cross">99</span><span class="price-active">89</span></div>
+                                <div class="flex justify-between"><span>Forehead</span> <span><span class="price-cross">149</span><span class="price-active">129</span></div>
+                                <div class="flex justify-between"><span>Side Locks</span> <span><span class="price-cross">99</span><span class="price-active">89</span></div>
+                                <div class="flex justify-between"><span>Jawline</span> <span><span class="price-cross">99</span><span class="price-active">89</span></div>
+                                <div class="flex justify-between"><span>Neck</span> <span><span class="price-cross">199</span><span class="price-active">199</span></div>
+                                <div class="flex justify-between"><span>Full Face</span> <span><span class="price-cross">499</span><span class="price-active">349</span></div>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Benefits Section -->
+    <section class="bg-white py-16 border-t border-b border-pink-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-rose-50 rounded-full flex items-center justify-center mb-4 border border-rose-100">
+                        <i data-lucide="truck" class="text-rose-500 w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800">No Transport Fees</h4>
+                    <p class="text-xs text-gray-500 mt-1">Free within city limits</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-rose-50 rounded-full flex items-center justify-center mb-4 border border-rose-100">
+                        <i data-lucide="users" class="text-rose-500 w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800">Only For Ladies</h4>
+                    <p class="text-xs text-gray-500 mt-1">Exclusive & Private</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-rose-50 rounded-full flex items-center justify-center mb-4 border border-rose-100">
+                        <i data-lucide="clock" class="text-rose-500 w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800">8 Years Exp</h4>
+                    <p class="text-xs text-gray-500 mt-1">Certified Professional</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-rose-50 rounded-full flex items-center justify-center mb-4 border border-rose-100">
+                        <i data-lucide="check-circle" class="text-rose-500 w-8 h-8"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800">Min. Booking</h4>
+                    <p class="text-xs text-gray-500 mt-1">₹1000 Minimum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Booking Section -->
+    <section class="py-20 px-4 bg-rose-soft">
+        <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden gold-border">
+            <div class="gold-gradient h-2"></div>
+            <div class="p-8 md:p-12 text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Book Your Home Spa</h2>
+                <p class="text-gray-600 mb-8">Transform your home into a personal salon. Our skilled beauticians bring luxury beauty services directly to you</p>
+                
+                <div class="flex flex-col gap-4 max-w-sm mx-auto">
+                    <a href="tel:97310 45142" class="flex items-center justify-center gap-3 bg-gray-900 text-white py-4 px-6 rounded-xl font-bold text-lg hover:bg-black transition-colors">
+                        <i data-lucide="phone"></i>
+                        +91 97310 45142
+                    </a>
+                    <button onclick="window.location.href='https://wa.me/9197310 45142'" class="flex items-center justify-center gap-3 bg-[#25D366] text-white py-4 px-6 rounded-xl font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-green-100">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Book on WhatsApp
+                    </button>
+                </div>
+                <p class="mt-6 text-sm text-gray-400">Hours: 9 AM - 7 PM (Everyday)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-white text-center border-t border-gray-100">
+        <p class="text-rose-400 font-serif text-2xl mb-2">NAYANA</p>
+        <p class="text-gray-400 text-sm">© 2024 Nayana Beauty Home Services. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile Sticky Call CTA -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 md:hidden z-50">
+        <div class="flex gap-2">
+            <a href="tel:97310 45142" class="flex-1 bg-gray-900 text-white py-3 rounded-lg text-center font-bold shadow-lg">Call Now</a>
+            <a href="https://wa.me/91 97310 45142" class="flex-1 bg-[#25D366] text-white py-3 rounded-lg text-center font-bold shadow-lg">WhatsApp</a>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
